@@ -1,7 +1,8 @@
 plugins {
     alias(libs.plugins.android.application)
+    alias(libs.plugins.hilt)
     alias(libs.plugins.kotlin.android)
-    kotlin("kapt")
+    alias(libs.plugins.ksp)
 }
 
 android {
@@ -83,5 +84,5 @@ dependencies {
     // Custom debug implementation
     debugImplementation(libs.pluto.debugBuild)
 
-    kapt(libs.hilt.compiler)
+    ksp(libs.hilt.compiler)
 }

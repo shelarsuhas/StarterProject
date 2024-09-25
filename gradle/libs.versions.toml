@@ -1,6 +1,6 @@
 [versions]
 agp = "8.6.0"
-kotlin = "1.9.0"
+kotlin = "2.0.20"
 coreKtx = "1.13.1"
 junit = "4.13.2"
 junitVersion = "1.2.1"
@@ -8,6 +8,7 @@ espressoCore = "3.6.1"
 lifecycleRuntimeKtx = "2.8.5"
 activityCompose = "1.9.2"
 composeBom = "2024.09.00"
+ksp-version = "2.0.20-1.0.25"
 
 #First Party Libraries Version
 hilt = "2.51.1"
@@ -37,20 +38,21 @@ androidx-ui-test-junit4 = { group = "androidx.compose.ui", name = "ui-test-junit
 androidx-material3 = { group = "androidx.compose.material3", name = "material3" }
 
 # First party libraries
-hilt-android = { group = "com.google.dagger:hilt-android", name = "hilt-android", version.ref = "hilt" } # dependency injections
-hilt-compiler = { group = "com.google.dagger:hilt-compiler", name = "hilt-compiler", version.ref = "hilt" }
-android-coroutines = { group = "org.jetbrains.kotlinx:kotlinx-coroutines-android:", name = "android-coroutines", version.ref = "android-coroutines" }
-gson = { group = "com.google.code.gson:gson", name = "gson", version.ref = "gson" }
+hilt-android = { group = "com.google.dagger", name = "hilt-android", version.ref = "hilt" } # dependency injections
+hilt-compiler = { group = "com.google.dagger", name = "hilt-compiler", version.ref = "hilt" }
+android-coroutines = { group = "org.jetbrains.kotlinx", name = "kotlinx-coroutines-android", version.ref = "android-coroutines" }
+gson = { group = "com.google.code.gson", name = "gson", version.ref = "gson" }
 
 # Custom Libraries
-pluto-debugBuild = { group = "com.plutolib:pluto", version.ref = "pluto", name = "pluto-debug" } # debug app - shows api calls, logs, crashes, anr etc
-pluto-releaseBuild = { group = "com.plutolib:pluto-no-op", version.ref = "pluto", name = "pluto-release" }
-timber = { group = "com.jakewharton.timber:timber", version.ref = "timber", name = "timber" } # alternate to using android logs
-coil-kt = { group = "io.coil-kt:coil", version.ref = "coil", name = "coil-kt" } # image loading library
-coil-kt-compose = { group = "io.coil-kt:coil-compose", version.ref = "coil", name = "coil-kt-compose" }
-retrofit = { group = "com.squareup.retrofit2:retrofit", version.ref = "retrofit", name = "retrofit" }
+pluto-debugBuild = { group = "com.plutolib", version.ref = "pluto", name = "pluto" } # debug app - shows api calls, logs, crashes, anr etc
+pluto-releaseBuild = { group = "com.plutolib", version.ref = "pluto", name = "pluto-no-op" }
+timber = { group = "com.jakewharton.timber", version.ref = "timber", name = "timber" } # alternate to using android logs
+coil-kt = { group = "io.coil-kt", version.ref = "coil", name = "coil" } # image loading library
+coil-kt-compose = { group = "io.coil-kt", version.ref = "coil", name = "coil-compose" }
+retrofit = { group = "com.squareup.retrofit2", version.ref = "retrofit", name = "retrofit" }
 
 [plugins]
 android-application = { id = "com.android.application", version.ref = "agp" }
 kotlin-android = { id = "org.jetbrains.kotlin.android", version.ref = "kotlin" }
-
+ksp = { id = "com.google.devtools.ksp", version.ref = "ksp-version" }
+hilt = { id = "com.google.dagger.hilt.android", version.ref = "hilt" }
