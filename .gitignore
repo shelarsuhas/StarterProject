@@ -89,8 +89,3 @@ build-cache
 
 # Since Kotlin 2.0.0, folder named ".kotlin" is created at compile time
 .kotlin
-/.idea
-/.idea
-.DS_Store
-.idea/kotlinc.xml
-.idea/material_theme_project_new.xml
